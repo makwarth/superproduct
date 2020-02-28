@@ -150,7 +150,7 @@ const superproduct = {
 
       //defaults
       const defs = {
-        dispatchHost: "https://ingest.superproduct.io",
+        dispatchUrl: "https://ingest.superproduct.io",
         dispatchUrlEventsSuffix: "events",
         dispatchUrlAttributesSuffix: "attributes",
         dispatchInterval: 1000,
@@ -167,9 +167,9 @@ const superproduct = {
 
       //-account
       window.superproduct.CONFIG.dispatchUrlEvents =
-        defs.dispatchHost + "/" + config.appId + "/" + defs.dispatchUrlEventsSuffix;
+        window.superproduct.CONFIG.dispatchUrl + "/" + config.appId + "/" + defs.dispatchUrlEventsSuffix;
         window.superproduct.CONFIG.dispatchUrlAttributes =
-        defs.dispatchHost + "/" + config.appId + "/" + defs.dispatchUrlAttributesSuffix;
+        window.superproduct.CONFIG.dispatchUrl + "/" + config.appId + "/" + defs.dispatchUrlAttributesSuffix;
 
     } catch(err) {
       if (window.superproduct.CONFIG.debug)
