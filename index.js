@@ -144,8 +144,7 @@ const superproduct = {
 
       //defaults
       const defs = {
-        dispatchHost: "http://localhost:3200",
-        //dispatchHost: "https://ingest.superproduct.io",
+        dispatchHost: "https://ingest.superproduct.io",
         dispatchUrlEventsSuffix: "events",
         dispatchUrlAttributesSuffix: "attributes",
         dispatchInterval: 1000,
@@ -153,12 +152,12 @@ const superproduct = {
         debug: false
       };
 
-      console.log("superproduct:", defs.dispatchHost);
-
       //optional user overwrites
+      window.superproduct.CONFIG.dispatchHost = config.dispatchHost || defs.dispatchHost;
       window.superproduct.CONFIG.dispatchInterval = defs.dispatchInterval;
       window.superproduct.CONFIG.dispatchAtttributesInterval = defs.dispatchAtttributesInterval;
       window.superproduct.CONFIG.debug = config.debug || defs.debug;
+     
 
       //-account
       window.superproduct.CONFIG.dispatchUrlEvents =
