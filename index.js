@@ -159,7 +159,7 @@ const superproduct = {
       };
 
       //optional user overwrites
-      window.superproduct.CONFIG.dispatchHost = config.dispatchHost || defs.dispatchHost;
+      window.superproduct.CONFIG.dispatchUrl = config.dispatchUrl || defs.dispatchUrl;
       window.superproduct.CONFIG.dispatchInterval = defs.dispatchInterval;
       window.superproduct.CONFIG.dispatchAtttributesInterval = defs.dispatchAtttributesInterval;
       window.superproduct.CONFIG.debug = config.debug || defs.debug;
@@ -168,7 +168,7 @@ const superproduct = {
       //-account
       window.superproduct.CONFIG.dispatchUrlEvents =
         window.superproduct.CONFIG.dispatchUrl + "/" + config.appId + "/" + defs.dispatchUrlEventsSuffix;
-        window.superproduct.CONFIG.dispatchUrlAttributes =
+      window.superproduct.CONFIG.dispatchUrlAttributes =
         window.superproduct.CONFIG.dispatchUrl + "/" + config.appId + "/" + defs.dispatchUrlAttributesSuffix;
 
     } catch(err) {
