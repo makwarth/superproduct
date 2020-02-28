@@ -9,7 +9,8 @@ const superproduct = {
       }, window.superproduct.CONFIG.dispatchAtttributesInterval);
 
     } catch (err) {
-      console.log(err);
+      if (window.superproduct.CONFIG.debug)
+        console.log(err);
     }
   },
 
@@ -40,7 +41,8 @@ const superproduct = {
           console.log("superproduct: No attributes to dispatch");
       }
     } catch(err) {
-      console.log("superproduct: attribues dispatch error");
+      if (window.superproduct.CONFIG.debug)
+        console.log("superproduct: attribues dispatch error");
     }
   },
 
@@ -48,7 +50,8 @@ const superproduct = {
     try {
       
       if(!window.superproduct.EVENTS_OBJ.company) {
-        console.log("superproduct: run identify first");
+        if (window.superproduct.CONFIG.debug)
+          console.log("superproduct: run identify first");
         return null;
       }
       
@@ -71,9 +74,11 @@ const superproduct = {
 
     } catch (err) {
       if(!window.superproduct) {
-        console.log("superproduct: run init first");
+        if (window.superproduct.CONFIG.debug)
+          console.log("superproduct: run init first");
       } else {
-        console.log("superproduct: error");
+        if (window.superproduct.CONFIG.debug)
+          console.log("superproduct: error");
       }
     }
   },
@@ -120,7 +125,8 @@ const superproduct = {
 
       }, window.superproduct.CONFIG.dispatchInterval);
     } catch (err) {
-      console.log(err);
+      if (window.superproduct.CONFIG.debug)
+        console.log(err);
     }
   },
 
@@ -166,7 +172,8 @@ const superproduct = {
         defs.dispatchHost + "/" + config.appId + "/" + defs.dispatchUrlAttributesSuffix;
 
     } catch(err) {
-      console.log("superproduct: could not init")
+      if (window.superproduct.CONFIG.debug)
+        console.log("superproduct: could not init")
     }
 
   },
@@ -194,9 +201,11 @@ const superproduct = {
     } catch(err) {
       
       if(!window.init) {
-        console.log("superproduct: run init first")
+        if (window.superproduct.CONFIG.debug)
+          console.log("superproduct: run init first")
       } else {
-        console.log(err);
+        if (window.superproduct.CONFIG.debug)
+          console.log(err);
       }
 
     }
