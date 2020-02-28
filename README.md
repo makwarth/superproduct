@@ -12,7 +12,7 @@ npm install superproduct
 **Import the package**
 
 ```
-import superproduct from "./superproduct-agent";
+import superproduct from "superproduct";
 ```
 
 **Initialize the agent**
