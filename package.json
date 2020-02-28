@@ -1,0 +1,22 @@
+{
+  "name": "superproduct",
+  "version": "1.0.0",
+  "description": "Browser agent for superproduct.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/makwarth/superproduct.git"
+  },
+  "keywords": [
+    "superproduct"
+  ],
+  "author": "makwarth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makwarth/superproduct/issues"
+  },
+  "homepage": "https://github.com/makwarth/superproduct#readme"
+}
