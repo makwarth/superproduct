@@ -1,6 +1,6 @@
 {
   "name": "superproduct",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Browser agent for superproduct.io",
   "main": "index.js",
   "scripts": {
