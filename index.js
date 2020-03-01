@@ -5,7 +5,7 @@ const superproduct = {
       
       this.dispatchAttributes(true);
       setInterval(function() {
-        superproduct.dispatchAttributes()
+        superproduct.dispatchAttributes(false)
       }, window.superproduct.CONFIG.dispatchAtttributesInterval);
 
     } catch (err) {
@@ -20,7 +20,11 @@ const superproduct = {
       if (Object.keys(window.superproduct.ATTRIBUTES_OBJ).length > 0) {
         
         //update web session count?
-        if(updateWebSessionCount) window.superproduct.ATTRIBUTES_OBJ.web_session_count ? true : false;
+        if(updateWebSessionCount) {
+          window.superproduct.ATTRIBUTES_OBJ.web_session_count = true;
+        } else {
+          window.superproduct.ATTRIBUTES_OBJ.web_session_count = false;
+        }
         
         //dispatch
         fetch(window.superproduct.CONFIG.dispatchUrlAttributes, {
