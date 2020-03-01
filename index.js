@@ -3,7 +3,7 @@ const superproduct = {
   attributes: function() {
     try {
       
-      this.dispatchAttributes();
+      this.dispatchAttributes(true);
       setInterval(function() {
         superproduct.dispatchAttributes()
       }, window.superproduct.CONFIG.dispatchAtttributesInterval);
@@ -14,10 +14,14 @@ const superproduct = {
     }
   },
 
-  dispatchAttributes: function() {
+  dispatchAttributes: function(updateWebSessionCount) {
     try {
       //are there any attributes to dispatch?
       if (Object.keys(window.superproduct.ATTRIBUTES_OBJ).length > 0) {
+        
+        //update web session count?
+        if(updateWebSessionCount) window.superproduct.ATTRIBUTES_OBJ.web_session_count ? true : false;
+        
         //dispatch
         fetch(window.superproduct.CONFIG.dispatchUrlAttributes, {
           method: "POST",
@@ -139,6 +143,7 @@ const superproduct = {
           GLOBAL_TAGS: {},
           ATTRIBUTES_OBJ: {
             company: null,
+            web_session_count: false,
             attributes: {}
           },
           EVENTS_OBJ: {
